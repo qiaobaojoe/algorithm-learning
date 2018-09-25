@@ -20,28 +20,9 @@ import static java.lang.System.out;
 
 public class BubbleSort {
 
-    public static void main(String[] args) {
-//        班里有多少人
-//        Integer students[] = new Integer[5];
-        Integer students[] = new Integer[]{1,2,3,4,5};
-
-        Random random = new Random();
-        for (int i = 0; i <students.length ; i++) {
-////            随机的插入120-160间的身高
-            students[i] =random.nextInt(40) + 120  ;
-        }
-        System.out.println("==================初始化的数组==============");
-        System.out.println(Arrays.toString(students));
-
-        BubbleSort bubbleSort = new BubbleSort();
-        Integer sortStudents[] = bubbleSort.sort(students);
-
-        System.out.println("==================排序后的数组==============");
-        System.out.println(Arrays.toString(sortStudents));
-    }
 
 
-    public Integer[] sort(Integer[] students) {
+    public static Integer[] sort(Integer[] students) {
 
 
 //        一共需要几次人员移动?
@@ -57,7 +38,7 @@ public class BubbleSort {
             //        找出最高的人,人员所需要挪动的次数
             int now = times-i;
 
-            for (int j = 0; j <now; j++) {
+            for (int j = 0; j <now ; j++) {
 //                每进入一次唯一循环时，初始赋值0
                 sortResult = 0 ;
 //            比较当前对象比右边对象大，则两者调换位置
@@ -67,8 +48,8 @@ public class BubbleSort {
                     students[j + 1]= num;
 //                    进行位移的话，计数
                     sortResult++;
+                    System.out.println("数组交换位置"+Arrays.toString(students));
                 }
-                System.out.println("人员移动"+Arrays.toString(students));
             }
 
             System.out.println("==================第"+(i+1)+"次排序后==============");

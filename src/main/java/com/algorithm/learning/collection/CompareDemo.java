@@ -40,6 +40,9 @@ public class CompareDemo {
             System.out.println(k + "=" + v);
         });
 
+        Object
+
+
 
 
 
